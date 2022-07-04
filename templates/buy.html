@@ -1,0 +1,31 @@
+{% extends "layout.html" %} {% block title %} {{ action|title }} Stock {%
+endblock %} {% block main %}
+<p class="mb-4 display-6">{{ action|title }} Stock</p>
+<form action="/{{ action|lower }}" method="post">
+    <div class="mb-3 row input-group justify-content-center">
+        <div class="col-auto mt-1">
+            <input
+                autocomplete="off"
+                autofocus
+                name="symbol"
+                type="text"
+                placeholder="Stock Symbol"
+            />
+        </div>
+        <div class="col-auto mt-1">
+            <input
+                autocomplete="off"
+                name="shares"
+                type="number"
+                placeholder="How Many Shares"
+                min="1"
+            />
+        </div>
+        <div class="col-auto">
+            <button class="btn btn-primary" type="submit">
+                {{ action|title }}
+            </button>
+        </div>
+    </div>
+</form>
+{% endblock %}

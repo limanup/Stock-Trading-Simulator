@@ -1,0 +1,51 @@
+{% extends "layout.html" %} {% block title %} Sell Stock {% endblock %} {% block
+main %}
+<p class="mb-4 display-6">Sell Stock</p>
+<form action="/sell" method="post">
+    <div class="mb-3 row input-group justify-content-center">
+        <div class="col-auto">
+            <select name="symbol" id="symbol" class="form-select">
+                <option disabled selected>Stock Symbol</option>
+                {% for stock in stocks %}
+                <option value="{{ stock['symbol'] }}">
+                    {{ stock['symbol'] }}
+                </option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="col-auto mt-1">
+            <input
+                name="shares"
+                id="shares"
+                class="input-group"
+                autocomplete="off"
+                type="number"
+                placeholder="How Many Shares"
+                min="1"
+            />
+        </div>
+        <div class="col-auto">
+            <button class="btn btn-primary" type="submit">Sell</button>
+        </div>
+        <!-- script to update max shares can be sold in real time -->
+        <script>
+            stocks = {{ stocks|tojson }};
+            let symbol = document.getElementById("symbol");
+            symbol.addEventListener("change", function () {
+                let max = 0;
+                for (let i = 0; i < stocks.length; i++) {
+                    if (stocks[i]['symbol'] == symbol.value) {
+                        max = stocks[i]['total_shares'];
+                    }
+                }
+                if (max > 0) {
+                    document.getElementById("shares").max = max;
+                    document.getElementById("shares").value = '';}
+                else {
+                    alert("You do not own any of this stock.");
+                }
+            });
+        </script>
+    </div>
+</form>
+{% endblock %}

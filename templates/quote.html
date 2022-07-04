@@ -1,0 +1,42 @@
+{% extends "layout.html" %} {% block title %} Quote {% endblock %} {% block main
+%}
+<p class="mb-4 display-6">Get Stock Quote</p>
+<form action="/quote" method="post">
+    <div class="mb-3">
+        <input
+            autocomplete="off"
+            autofocus
+            name="symbol"
+            placeholder="Stock Symbol"
+            type="text"
+        />
+        <button class="btn btn-primary ms-3" type="submit">Get Quote</button>
+    </div>
+
+    <!-- check if quote is passed over from render_template -->
+    {% if quote is defined and quote|length > 0 %}
+    <!-- d-flex justify-content-center to center the table -->
+    <div class="mt-5 mb-3 container d-flex justify-content-center">
+        <table class="table table-hover table-bordered w-auto">
+            <thead>
+                <tr>
+                    <th colspan="2">Stock Quote Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for key in quote %}
+                <tr>
+                    <td>{{ key.title() }}</td>
+                    <td>
+                        <!-- format the price in USD if key='price' -->
+                        {% if key == 'price' %} {{ quote[key]|usd }} {% else %}
+                        {{ quote[key] }} {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% endif %}
+</form>
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends "layout.html" %} {% block title %} History {% endblock %} {% block
+main %}
+<!-- need this to use jQuery  -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<link
+    rel="stylesheet"
+    type="text/css"
+    href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css"
+/>
+
+<script
+    type="text/javascript"
+    charset="utf8"
+    src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"
+></script>
+
+<p class="mb-4 display-6">Stock Trading Transaction History</p>
+<div
+    class="mt-5 mb-3 table-responsive overflow-auto container justify-content-center"
+>
+    <table
+        class="table table-striped table-hover table-bordered"
+        id="dthistory"
+    >
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Symbol</th>
+                <th scope="col">Stock Name</th>
+                <th scope="col">Action</th>
+                <th scope="col">Price</th>
+                <th scope="col"># of Shares</th>
+                <th scope="col">Transaction DateTime</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in range(trades|length) %}
+            <tr>
+                <td scope="row">{{ i+1 }}</td>
+                <td>{{ trades[i]["symbol"] }}</td>
+                <td>{{ trades[i]["name"] }}</td>
+                <td>{{ trades[i]["action"] }}</td>
+                <td>{{ trades[i]["price"]|usd }}</td>
+                <td>{{ trades[i]["shares"] }}</td>
+                <td>{{ trades[i]["datetime"] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("#dthistory").DataTable();
+    });
+</script>
+
+{% endblock %}
