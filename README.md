@@ -16,7 +16,7 @@ Before launching this website, you need to register for an API key in order to b
 1. Visit [iexcloud.io/cloud-login#/register/](https://iexcloud.io/cloud-login#/register/).
 2. Select the “Individual” account type, then enter your name, email address, and a password, and click “Create account”.
 3. Once registered, scroll down to “Get started for free” and click “Select Start plan” to choose the free plan.
-4. Once you’ve confirmed your account via a confirmation email, visit [https://iexcloud.io/console/tokens](https://iexcloud.io/console/tokens).
+4. Once you’ve confirmed your account via a confirmation email, visit [iexcloud.io/console/tokens](https://iexcloud.io/console/tokens).
 5. Copy the key that appears under the Token column (it should begin with pk\_).
 6. In your terminal window, execute:
     ```
