@@ -6,7 +6,7 @@ Users have to register for their own accounts. After registering and logging int
 
 ### IEX
 
-The stock market live price is queried from [IEX](https://exchange.iex.io/products/market-data-connectivity/)
+The stock market live price is queried from [IEX](https://exchange.iex.io/products/market-data-connectivity/).  
 IEX lets you download stock quotes via their API (application programming interface) using URLs like `https://cloud-sse.iexapis.com/stable/stock/nflx/quote?token=API_KEY`. Netflix’s symbol (NFLX) is embedded in this URL; that’s how IEX knows whose data to return. That link won’t actually return any data because IEX requires you to use an API key.
 
 ### Configuring
