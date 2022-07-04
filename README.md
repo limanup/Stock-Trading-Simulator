@@ -19,7 +19,7 @@ Before launching this website, you need to register for an API key in order to b
 4. Once you’ve confirmed your account via a confirmation email, visit [https://iexcloud.io/console/tokens](https://iexcloud.io/console/tokens).
 5. Copy the key that appears under the Token column (it should begin with pk\_).
 6. In your terminal window, execute:
-    ```bash
+    ```
     export API_KEY=value
     ```
     where value is that (pasted) value, without any space immediately before or after the =. You also may wish to paste that value in a text document somewhere, in case you need it again later.
