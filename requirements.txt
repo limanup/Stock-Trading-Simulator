@@ -1,5 +1,5 @@
-Flask
-Flask-Session
-requests
-urllib3
-Werkzeug
+Flask==2.1.2
+Flask-Session==0.4.0
+requests==2.28.0
+urllib3==1.26.9
+Werkzeug==2.1.2
