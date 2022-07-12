@@ -13,6 +13,10 @@ IEX lets you download stock quotes via their API (application programming interf
 
 ## Illustrations
 
+### Main Page When User Logs In
+
+![main page](illustrations/main-page.png)
+
 ### Register and Login
 
 ![register and login](illustrations/register-and-login.gif)
