@@ -1,6 +1,6 @@
 ### Stock Trading Simulator
 
-A website lets users simulate trading in the stock market using Flask and SQLite3.
+A website lets users simulate trading in live stock market, built with Flask and SQLite3.
 
 Users have to register for their own accounts. After registering and logging into user's account, user can search for stock's quote, "buy" and "sell" stocks at stock market live price, as well ask check current stock holdings and trading history. Each user starts with $10,000 "cash" after registration.
 
