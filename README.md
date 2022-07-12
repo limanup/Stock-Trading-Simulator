@@ -10,3 +10,25 @@ To start "trading", visit: [stock-trading-simulator-flask.herokuapp.com](https:/
 
 The stock market live price is queried from [IEX](https://exchange.iex.io/products/market-data-connectivity/).  
 IEX lets you download stock quotes via their API (application programming interface) using URLs like `https://cloud-sse.iexapis.com/stable/stock/nflx/quote?token=API_KEY`.
+
+## Illustrations
+
+### Register and Login
+
+![register and login](illustrations/register-and-login.gif)
+
+### Get Stock Quote
+
+![get quote](illustrations/get-quote.gif)
+
+### Buy Stock
+
+![buy stock](illustrations/buy-stock.gif)
+
+### Sell Stock
+
+![sell stock](illustrations/sell-stock.gif)
+
+### History and Logout
+
+![history and logout](illustrations/history-and-logout.gif)
