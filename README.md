@@ -4,7 +4,8 @@ A website lets registered users simulate trading in stock market with live price
 
 Users have to register for their own accounts. After registering and logging into user's account, user can search for stock's quote, "buy" and "sell" stocks at stock market live price, as well as check current stock holdings and trading history. Each user starts with $10,000 "cash" after registration.
 
-To start "trading", visit: [stock-trading-simulator-flask.herokuapp.com](https://stock-trading-simulator-flask.herokuapp.com/)
+The web app was originally hosted on [Heroku](https://stock-trading-simulator-flask.herokuapp.com/) until Heroku ended the free tiers. Currently working on migrating the app from Heroku to Vercel. 
+<!-- To start "trading", visit: [stock-trading-simulator-flask.herokuapp.com](https://stock-trading-simulator-flask.herokuapp.com/) -->
 
 ### IEX
 
